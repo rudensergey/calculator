@@ -139,9 +139,29 @@ h1,h2,h3,h4,h5,h6,p,a {
     color: #3F3F3F;
 }
 
+.term__line {
+    height: 4px;
+    width: 100%;
+    background-color: #C4C4C4;
 
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
 
+    margin: auto 0px;
+}
 
+.term__toggle {    
+    width: 36px;
+    height: 36px;
+    margin: auto 0px;
+
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: 3px solid #4D8D8D;
+
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
 
 
 
@@ -149,9 +169,86 @@ h1,h2,h3,h4,h5,h6,p,a {
 /* CHECKBOX ###################################### */
 
 .calculator__checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     grid-column: 2 / 3;
     grid-row: 5 / 6;
 }
+
+.calculator__checkbox .container {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    font-family: "Roboto";
+    font-size: 19px;
+    color: #3F3F3F;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .calculator__checkbox .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .calculator__checkbox .checkmark {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .calculator__checkbox .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .calculator__checkbox .container input:checked ~ .checkmark {
+    background-color: #4D8D8D;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .calculator__checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .calculator__checkbox .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .calculator__checkbox .container .checkmark:after {
+    left: 12px;
+    top: 7px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 
 
 /* RESULT ###################################### */

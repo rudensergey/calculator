@@ -24,6 +24,7 @@
 h1,h2,h3,h4,h5,h6,p,a {
     font-family: 'Roboto';
     margin: 0px;
+    color: #3F3F3F;
 }
 
 .calculator__box {
@@ -36,15 +37,132 @@ h1,h2,h3,h4,h5,h6,p,a {
     border-radius: 3px;
 
     display: grid;
-    grid-template-columns: 7% 1fr 7%;
+    grid-template-columns: 7% 86% 7%;
     grid-template-rows: 5% 20% 20% 25% 10% 20%;
 }
 
-.calculator__text__topic {
+.text__topic {
     font-size: 57px;
     font-weight: bold;
-    color: #3F3F3F;
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+.text__form {
+    font-size: 19px;
+    font-weight: bold;
+    color: #B2B2B2;
+}
+
+
+
+
+/* SUM ###################################### */
+
+.calculator__sum {
+    height: 100%;
+    width: 100%;
+
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.calculator__input {
+    width: 100%;
+    height: 62px;
+    margin-top: 12px;
+    padding-left: 20px;
+
+    font-size: 30px;
+    color: #3F3F3F;
+
+    border: 4px solid #BDD0D1;
+    box-sizing: border-box;
+}
+
+
+
+
+/* TERM ###################################### */
+
+.calculator__term {
+    height: 100%;
+    width: 100%;
+
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+
+    display: grid;
+    justify-content: end;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.calculator__term .text__form {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.term__timeline {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.term__timeline h6 {
+    font-size: 19px;
+    font-weight: bold;
+    color: #B2B2B2;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.term__timeline .term__current {
+    color: #3F3F3F;
+}
+
+
+
+
+
+
+
+
+/* CHECKBOX ###################################### */
+
+.calculator__checkbox {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+
+/* RESULT ###################################### */
+
+.calculator__result {    
+    width: 100%;
+    height: 100%;
+
+    background: #4D8D8D;
+    border-radius: 0px 0px 3px 3px;
+
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
 }

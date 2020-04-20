@@ -1,0 +1,50 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./Fonts/Roboto-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./Fonts/Roboto-Regular.ttf") format('truetype');
+    font-weight: 600;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./Fonts/Roboto-Light.ttf") format('truetype');
+    font-weight: 400;
+    font-style: light;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+    font-family: 'Roboto';
+    margin: 0px;
+}
+
+.calculator__box {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+
+    display: grid;
+    grid-template-columns: 7% 1fr 7%;
+    grid-template-rows: 5% 20% 20% 25% 10% 20%;
+}
+
+.calculator__text__topic {
+    font-size: 57px;
+    font-weight: bold;
+    color: #3F3F3F;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}

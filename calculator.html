@@ -12,36 +12,37 @@
         <h2 class="text__topic">Калькулятор дохода Affilate Coin</h2>
         
         <div class="calculator__sum">
-            <h5 class="text__form">Сумма, которую хотите инвестировать, $</h6>
-            <input class="calculator__input" type="text">
+            <h6 class="text__form">Сумма, которую хотите инвестировать, $</h6>
+            <input id="sum" class="calculator__input" type="text" value="">
         </div>
         
         <div class="calculator__term">
-            <h5 class="text__form">Укажите срок инвестирования, дней</h6>
+            <h6 class="text__form">Укажите срок инвестирования, дней</h6>
             
                 <div class="term__timeline">
                 <h6 class="term__min">20</h6>
-                <h6 class="term__current">200</h6>
+                <h6 id="term" class="term__current">200</h6>
                 <h6 class="term__max">365</h6>
             </div>
             
-            <div class="term__line"></div>
-            <div class="term__toggle"></div>
+            <div id="timeline" class="term__line"></div>
+            <div id="toggle" class="term__toggle"></div>
         </div>
 
         <div class="calculator__checkbox"> 
-            <label class="container text__form">Учесть рост курса AFFILATE
-                <input type="checkbox">
+            <label id="checkboxLayout" class="container text__form">Учесть рост курса AFFILATE
+                <input id="checkboxInput" type="checkbox">
                 <span class="checkmark"></span>
             </label>
         </div>
 
         <div class="calculator__result">
-            <h5 class="text__form">Результат:</h6>
-            <p class="text__result">10.000</p>
+            <h6 class="text__form">Результат:</h6>
+            <p id="result" class="text__result">0.00$</p>
         </div>
 
         <div class="calculator__result__background"></div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

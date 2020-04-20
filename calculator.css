@@ -257,9 +257,34 @@ h1,h2,h3,h4,h5,h6,p,a {
     width: 100%;
     height: 100%;
 
-    background: #4D8D8D;
-    border-radius: 0px 0px 3px 3px;
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.calculator__result .text__form {
+    color: white;
+    opacity: 0.7;
+}
+
+.calculator__result .text__result {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.calculator__result__background {
+    width: 100%;
+    height: 100%;
     grid-column: 1 / -1;
     grid-row: 6 / 7;
+
+    background: #4D8D8D;
+    border-radius: 0px 0px 3px 3px;
+    z-index: 1;
 }

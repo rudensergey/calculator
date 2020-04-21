@@ -1,7 +1,6 @@
 {
   "name": "webpack-demo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -10,8 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  }
+  "devDependencies": {},
+  "description": ""
 }

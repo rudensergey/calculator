@@ -49,6 +49,7 @@
     transition-property: border;
     transition-duration: 0.2s;
     box-sizing: border-box;
+    
 }
 
 .calculator__input:hover {

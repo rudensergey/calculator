@@ -105,8 +105,15 @@ function showFinalSum() {
     let currency = 1;
 
     input.value = +(input.value + "").replace(/\D/gi, "")
+    console.log(input.value.length)
+    if (input.value.split("").length > 9) {
+        let newIpnut = input.value.split("")
+        newIpnut.pop()
+        input.value = newIpnut.join("")
+    }
 
     let deposit = input.value;
+    
 
     if (layout.hasAttribute("data-checked")) currency = 20;
     current.innerText = days;

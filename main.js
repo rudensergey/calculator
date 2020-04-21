@@ -5,6 +5,8 @@ let toggle = document.getElementById("toggle");
 let timeline = document.getElementById("timeline");
 let current = document.getElementById("term__current");
 
+let days = 20;
+
 toggle.onmousedown = function (event) {
     event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
@@ -22,10 +24,10 @@ toggle.onmousedown = function (event) {
 
         let point =
             (coords.left + coords.width - 18 - (coords.left + 36)) / 345;
-        let days =
+        days =
             Math.round((event.clientX - (coords.left + 36)) / point) + 20;
 
-        showFinalSum(days);
+        showFinalSum();
 
         // курсор вышел из слайдера => оставить бегунок в его границах.
         if (newLeft < 0) newLeft = 0;
@@ -58,17 +60,17 @@ layout.addEventListener("click", (e) => {
     }
 });
 
-function showFinalSum(term = 20) {
-    if (term <= 20) term = 20;
-    if (term >= 365) term = 365;
+function showFinalSum() {
+    if (days <= 20) days = 20;
+    if (days >= 365) days = 365;
     let currency = 1;
     let deposit = input.value;
 
     if (layout.hasAttribute("data-checked")) currency = 20;
 
-    current.innerText = term;
+    current.innerText = days;
     result.innerText =
-        (deposit * (1 + 0.0027) ** term * ((currency / term) * term)).toFixed(
+        (deposit * (1 + 0.0027) ** days * ((currency / days) * days)).toFixed(
             2
         ) + "$";
 }

@@ -14,7 +14,7 @@ p,
 a {
     margin: 0px;
     color: #3F3F3F;
-    font-family: "Roboto";
+    font-family: Roboto, sans-serif;
 }
 
 .calculator__box {
@@ -117,8 +117,8 @@ a {
 }
 
 .term__timeline .term__current {
-    font-size: 30px;
     color: #3F3F3F;
+    font-size: 30px;
 }
 
 .term__line {
@@ -142,6 +142,7 @@ a {
     cursor: grab;
     grid-column: 1 / -1;
     grid-row: 3 / 4;
+    touch-action: pan-x;
 }
 
 /* CHECKBOX ###################################### */
@@ -160,7 +161,7 @@ a {
     margin-top: 8px;
     margin-bottom: 12px;
     color: #3F3F3F;
-    font-family: "Roboto";
+    font-family: Roboto, sans-serif;
     font-size: 19px;    
     -webkit-user-select: none;
     -moz-user-select: none;

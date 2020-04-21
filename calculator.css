@@ -2,23 +2,29 @@
 @import url("./main.css");
 @import url("./mobile.css");
 
+
 @font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url("/Fonts/Roboto-Bold.ttf") format('truetype');
+    font-family: Pompadur; /* Имя шрифта */
+    src: url(fonts/pompadur.ttf); /* Путь к файлу со шрифтом */   
+}
+
+@font-face {
+    font-family: Roboto, sans-serif;
+    src: url(Fonts/Roboto-Bold.ttf) format('truetype');
     font-weight: 700;
     font-style: bold;
 }
 
 @font-face {
-    font-family: 'Roboto' sans-serif;
-    src: url("/Fonts/Roboto-Regular.ttf") format('truetype');
+    font-family: Roboto, sans-serif;
+    src: url(Fonts/Roboto-Regular.ttf) format('truetype');
     font-weight: 600;
     font-style: regular;
 }
 
 @font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url("/Fonts/Roboto-Light.ttf") format('truetype');
+    font-family: Roboto, sans-serif;
+    src: url(Fonts/Roboto-Light.ttf) format('truetype');
     font-weight: 400;
     font-style: light;
 }

@@ -49,10 +49,14 @@
     transition-property: border;
     transition-duration: 0.2s;
     box-sizing: border-box;
-    
 }
 
 .calculator__input:hover {
+    border: 4px solid #4D8D8D
+}
+
+.calculator__input:focus {
+    outline: none;
     border: 4px solid #4D8D8D
 }
 
@@ -106,7 +110,7 @@
 .term__line {
     height: 4px;
     width: 100%;
-    margin: auto 0px;
+    margin: 20px 0px;
     background-color: #C4C4C4;
     grid-column: 1 / -1;
     grid-row: 3 / 4;

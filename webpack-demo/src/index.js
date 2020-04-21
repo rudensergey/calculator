@@ -5,7 +5,7 @@ let toggle = document.getElementById("toggle");
 let timeline = document.getElementById("timeline");
 let current = document.getElementById("term__current");
 
-let days = 20;
+let days = 30;
 
 toggle.ontouchstart = function (event) {
     event.preventDefault();
@@ -30,7 +30,7 @@ toggle.ontouchstart = function (event) {
             (coords.left + coords.width - 18 - (coords.left + 36)) / 345;
         days =
             Math.round((touchLocation.clientX - (coords.left + 36)) / point) +
-            20;
+            30;
 
         showFinalSum();
 
@@ -43,8 +43,8 @@ toggle.ontouchstart = function (event) {
     }
 
     function onMouseUp() {
-        document.removeEventListener("touchmove", onMouseUp);
-        document.removeEventListener("touchend", onMouseMove);
+        document.removeEventListener("touchmove", onMouseMove);
+        document.removeEventListener("touchend", onMouseUp);
     }
 };
 
@@ -103,9 +103,7 @@ function showFinalSum() {
     if (days > 365) days = 365;
 
     let currency = 1;
-
-    input.value = +(input.value + "").replace(/\D/gi, "")
-    console.log(input.value.length)
+    
     if (input.value.split("").length > 9) {
         let newIpnut = input.value.split("")
         newIpnut.pop()

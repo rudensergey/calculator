@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
         
         <div class="calculator__sum">
             <h6 class="text__form">Сумма, которую хотите инвестировать, $</h6>
-            <input id="sum" class="calculator__input" autocomplete="off" value="0" type="number" pattern="[1-9][0-9]*" inputmode="decimal">
+            <input id="sum" class="calculator__input" autocomplete="off" value="0" type="number" pattern="[0-9]*" inputmode="decimal">
         </div>
         
         <div class="calculator__term">
@@ -45,6 +45,6 @@
 
         <div class="calculator__result__background"></div>
     </div>
-    <script src="src/index.js"></script>
+    <script src="./src/index.js"></script>
 </body>
 </html>

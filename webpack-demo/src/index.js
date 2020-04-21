@@ -103,7 +103,9 @@ function showFinalSum() {
     if (days > 365) days = 365;
 
     let currency = 1;
-    
+
+    input.value = +(input.value + "").replace(/\D/gi, "")
+
     if (input.value.split("").length > 9) {
         let newIpnut = input.value.split("")
         newIpnut.pop()

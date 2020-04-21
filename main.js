@@ -7,16 +7,11 @@ let current = document.getElementById("term__current");
 
 let days = 20;
 
-
-// #####################################
-
 toggle.ontouchstart = function (event) {
-    event.preventDefault(); // предотвратить запуск выделения (действие браузера)
-    
+    event.preventDefault();
 
     var touchLoc = event.targetTouches[0];
     let shiftX = touchLoc.clientX - toggle.getBoundingClientRect().left;
-    // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
     document.addEventListener("touchmove", onMouseMove);
     document.addEventListener("touchend", onMouseUp);
@@ -25,14 +20,17 @@ toggle.ontouchstart = function (event) {
         let touchLocation = e.targetTouches[0];
 
         let newLeft =
-            touchLocation.clientX - shiftX - timeline.getBoundingClientRect().left;
+            touchLocation.clientX -
+            shiftX -
+            timeline.getBoundingClientRect().left;
 
         let coords = timeline.getBoundingClientRect();
 
         let point =
             (coords.left + coords.width - 18 - (coords.left + 36)) / 345;
         days =
-            Math.round((touchLocation.clientX - (coords.left + 36)) / point) + 20;
+            Math.round((touchLocation.clientX - (coords.left + 36)) / point) +
+            20;
 
         showFinalSum();
 
@@ -50,15 +48,10 @@ toggle.ontouchstart = function (event) {
     }
 };
 
-
-// ##############################################
-
-
 toggle.onmousedown = function (event) {
-    event.preventDefault(); // предотвратить запуск выделения (действие браузера)
+    event.preventDefault();
 
     let shiftX = event.clientX - toggle.getBoundingClientRect().left;
-    // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
@@ -71,12 +64,10 @@ toggle.onmousedown = function (event) {
 
         let point =
             (coords.left + coords.width - 18 - (coords.left + 36)) / 345;
-        days =
-            Math.round((event.clientX - (coords.left + 36)) / point) + 20;
+        days = Math.round((event.clientX - (coords.left + 36)) / point) + 20;
 
         showFinalSum();
 
-        // курсор вышел из слайдера => оставить бегунок в его границах.
         if (newLeft < 0) newLeft = 0;
         let rightEdge = timeline.offsetWidth - toggle.offsetWidth;
         if (newLeft > rightEdge) newLeft = rightEdge;
@@ -110,7 +101,10 @@ layout.addEventListener("click", (e) => {
 function showFinalSum() {
     if (days < 20) days = 20;
     if (days > 365) days = 365;
+
     let currency = 1;
+
+    input.value = +(input.value + "").replace(/\D/gi, "")
     let deposit = input.value;
 
     if (layout.hasAttribute("data-checked")) currency = 20;

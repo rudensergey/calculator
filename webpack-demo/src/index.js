@@ -99,8 +99,8 @@ layout.addEventListener("click", (e) => {
 });
 
 function showFinalSum() {
-    if (days < 30) days = 30;
-    if (days > 365) days = 365;
+    (days < 30) && (days = 30);
+    (days > 365) && (days = 365);
 
     let currency = 1;
 
@@ -115,7 +115,8 @@ function showFinalSum() {
     let deposit = input.value;
     
 
-    if (layout.hasAttribute("data-checked")) currency = 20;
+    layout.hasAttribute("data-checked") && (currency = 10);
+
     current.innerText = days;
     result.innerText =
         (deposit * (1 + 0.0027) ** days * ((currency / days) * days)).toFixed(
